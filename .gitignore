@@ -1,0 +1,10 @@
+# Secret files
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Operating system files
+.DS_Store
+Thumbs.db
