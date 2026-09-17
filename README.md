@@ -183,7 +183,7 @@ Your Python Script ---> Google Gemini API ---> Gemini 1.5 Flash ---> Your Python
 ```python
 import requests
 
-url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
 payload = {"contents": [{"parts": [{"text": "Explain Python in 1 sentence."}]}]}
 
 response = requests.post(url, json=payload)
