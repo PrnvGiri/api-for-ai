@@ -12,20 +12,20 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key or api_key == "your_actual_gemini_api_key_here":
- print("[Error] Please add your GEMINI_API_KEY inside the .env file first!")
- exit()
+    print("[Error] Please add your GEMINI_API_KEY inside the .env file first!")
+    exit()
 
 # Step 2: Google Gemini endpoint URL with your API key
-url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
 
 # Step 3: What do you want to ask Gemini?
 prompt = "Explain Machine Learning in 2 simple sentences for a school student."
 
 # Gemini expects the prompt inside this exact structure
 payload = {
- "contents": [
- {"parts": [{"text": prompt}]}
- ]
+    "contents": [
+        {"parts": [{"text": prompt}]}
+    ]
 }
 
 # Step 4: Send the request to Google (POST request because we are sending data)
